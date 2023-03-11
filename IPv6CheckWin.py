@@ -10,7 +10,7 @@ import win32service
 import win32event
 
 
-def getInterface(): #确认网卡连接公网的网卡
+def getInterface(): #确认连接公网的网卡
     interfaces=netifaces.interfaces()
     for interface in interfaces:
         addr=netifaces.ifaddresses(interface)
