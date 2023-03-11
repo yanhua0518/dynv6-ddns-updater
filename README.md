@@ -13,7 +13,7 @@ python IPv6CheckWin.py --startup auto install
 python IPv6CheckWin.py start
 ```
 
-###DSM版  
+### DSM版  
 IP更新时自动发送邮件到设定好的邮箱  
 直接添加到任务计划  
 ```
