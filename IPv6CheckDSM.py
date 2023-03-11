@@ -77,6 +77,8 @@ if tempIP:
     if tempIP!=oldIP:
         newIP=tempIP
         sentlog=datetime.now().strftime("%Y-%m-%d %H:%M:%S")+"\tNotice: IPv6 changed\n"
+        
+        #'''
         import smtplib
         from email.mime.text import MIMEText
         msg=MIMEText(newIP,'plain','utf-8')
@@ -92,6 +94,8 @@ if tempIP:
             sentlog+=datetime.now().strftime("%Y-%m-%d %H:%M:%S")+'\tE-mail: '+str(e)+'\n'
         #else:
             #sentlog+=datetime.now().strftime("%Y-%m-%d %H:%M:%S")+"\tE-mail: sent\n"
+        #'''
+        
         check=saveIPv6(SAVED_IP,newIP)
         if check!=True:
             sentlog+=datetime.now().strftime("%Y-%m-%d %H:%M:%S")+'\tfile: '+str(check)+'\n'
