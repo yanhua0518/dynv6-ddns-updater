@@ -45,16 +45,12 @@ def saveIPv6(fileName,ip):
 
 def findIPv6():
     output=os.popen('ip -f inet6 addr show eth0').readlines()
-    ip=''
     for line in output:
         if line.find('global')>-1:
             ip=line[line.find('inet6')+6:line.find('/')]
             #ip=line[line.find('inet6')+6:line.find('scope')-1]
-            break
-    if ip:
-        return ip
-    else:
-        return False
+            return ip
+    return False
 
 def saveLog(fileName,log):
     try:
