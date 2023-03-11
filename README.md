@@ -1,6 +1,6 @@
 # dynv6更新DDNS地址  
 个人用  
-### Win版
+### Win版  
 需要`pywin32`库，作为系统服务运行  
 可以用网盘的方式把本地存储的文件进行云同步以便随时确认  
 
@@ -13,7 +13,7 @@ python IPv6CheckWin.py --startup auto install
 python IPv6CheckWin.py start
 ```
 
-###DSM版
+###DSM版  
 IP更新时自动发送邮件到设定好的邮箱  
 直接添加到任务计划  
 ```
