@@ -16,7 +16,7 @@ def getInterface(): #确认连接公网的网卡
         addr=netifaces.ifaddresses(interface)
         if netifaces.AF_INET6 in addr.keys():
             tempIP=addr[netifaces.AF_INET6][0]['addr']
-            if tempIP[:4]=='2409': #中国移动
+            if tempIP[:3]=='240': #移动2409 电信240e 联通2408
                 return interface
     return ''
 
