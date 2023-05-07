@@ -25,7 +25,7 @@ def findIPv6(interface):
     #ip=addrs[netifaces.AF_INET6][0]['addr'] #获取最靠上的地址
     ip=''
     for addr in addrs[netifaces.AF_INET6]: #获取最新的临时地址
-        if addr['addr'][:4]=='2409':
+        if addr['addr'][:3]=='240':
             ip=addr['addr']
     return ip
 
